@@ -463,7 +463,7 @@ h1{line-height:1em; font-weight: 500;}
 
 .sig-container{position:relative}
 textarea {
-
+border-radius:0;
   position:absolute; top:0; left:0; right:0; bottom:0; height: 100%; width: 100%;
   padding: 1em 2em;
   background-color:#333; color: white; font-family: overpass-mono, monospace;
