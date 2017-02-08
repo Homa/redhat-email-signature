@@ -15,13 +15,17 @@
 <form>
 <h1>Red Hat <span>Signature Tool</span></h1>
 
-<input type="text" class="fullname" placeholder="Full Name"/>
-<input type="text" class="position" placeholder="Job Title"/>
-<input type="email" class="email" placeholder="Email Address"/>
-<input type="text" class="address" placeholder="Address"/>
-<input type="text" class="address2" placeholder="Address Line2 (optional)"/>
-<input type="tel"  class="mobile" placeholder="Mobile Phone"/>
-<input type="tel"  class="telephone" placeholder="Desk Phone"/>
+<input type="text"  class="fullname"  placeholder="Full Name"/>
+<input type="text"  class="position"  placeholder="Job Title"/>
+<input type="text"  class="cert"      placeholder="Certifications"/>
+
+<input type="text"  class="legal"      placeholder="Local Legal Entity" title="eg:  Inc / Asia Pacific Pte Ltd "/>
+<input type="text"  class="address"   placeholder="Address"/>
+<input type="text"  class="address2"  placeholder="Address Line2 (optional)"/>
+<input type="email" class="email"     placeholder="Email Address"/>
+<input type="tel"   class="mobile"    placeholder="Mobile Phone"/>
+<input type="tel"   class="telephone" placeholder="Desk Phone"/>
+<input type="tel"   class="fax" placeholder="Fax"/>
 
 
 <div class="promo-selector options">
@@ -48,14 +52,14 @@
 <label for="social-2" >Culture</label>
 
 <input type="radio" name="social-selector" id="social-3" />
-<label for="social-3" >Recruiting</label>
+<label for="social-3" >Jobs</label>
 
 <input type="radio" name="social-selector" id="nosocial" checked/>
 <label for="nosocial" >No Social</label>
 <span></span></div>
 
 <input type="text" class="public-key" placeholder="Public Key"/>
-<input type="text" class="RHCE #" placeholder="RHCT / RHCE / RHCA #"/>
+<input type="text" class="quote" placeholder="Quotable quote"/>
 
 
 </form>
@@ -74,16 +78,22 @@
 
 
 <div class="standard sig-container" id="full-sig">
-<span class="fullname-container">
-<p style="font-weight:bold; font-size: 14px; text-transform: uppercase; margin-bottom:0;">FIRSTNAME LASTNAME</p>
+<span class="fullname-container"><p style="font-weight:bold; margin:0; padding:0; font-size: 14px; text-transform: uppercase; margin-bottom:0;">FIRSTNAME LASTNAME</p>
 </span>
 
 <span class="position-container">
-<p style="font-weight:normal; font-size:11px;  margin-top:0; text-transform: uppercase"></p>
+<p style="font-weight:normal; font-size:11px;  margin:0; text-transform: uppercase"></p>
 </span>
-<span class="email-container" style="margin:0;"><a class="email_address_anchor" style="color:#0088ce;font-size:11px;text-decoration:none;font-family:'overpass', sans-serif;" href="mailto:"><span class="output_email_address"></span></a></span>
 
-<p  style="font-weight:normal; font-size:11px;">Red Hat <span class="legal-container"></span></p>
+<span class="cert-container">
+<p style="font-weight:normal; font-size:10px;  margin:0; "></p>
+</span>
+<p  style="font-weight:normal; margin:0; font-size:11px;">Red Hat <span class="legal-container"></span></p>
+
+<p class="email-container" style="margin:0;">
+  <a class="email_address_anchor" style="color:#0088ce;font-size:11px;margin:0;text-decoration:none;font-family:'overpass', sans-serif;" href="mailto:"><span class="output_email_address"></span></a>
+</p>
+
 
 <span class="address-container" style="font-size:11px; margin: 0 ;">
 <p style="font-size:11px; margin: 0 ;"></p>
@@ -92,8 +102,12 @@
 <p style="font-size:11px; margin: 0 ;"></p>
 </span>
 
-<p class="phone-numbers" style="font-weight:normal; font-size:10px; text-transform: uppercase"><span class="telephone-container">T: <span> </span> &nbsp; &nbsp;</span>
-<span class="mobile-container">M: <span></span></span></p>
+<p class="phone-numbers"
+    style="font-weight:normal; margin:0; font-size:10px; color:#777; text-transform: uppercase">
+    <span class="telephone-container">T: <a href="" style="color:#0088ce;font-size:11px;margin:0;text-decoration:none;font-family:'overpass', sans-serif;"></a> &nbsp; &nbsp;</span>
+    <span class="mobile-container"   >M: <a href="" style="color:#0088ce;font-size:11px;margin:0;text-decoration:none;font-family:'overpass', sans-serif;"></a>  &nbsp; &nbsp;</span>
+    <span class="fax-container"      >F: <a href="" style="color:#0088ce;font-size:11px;margin:0;text-decoration:none;font-family:'overpass', sans-serif;"></a></span>
+</p>
 
 <a href="https://redhat.com"> <img src="//www.redhat.com/profiles/rh/themes/redhatdotcom/img/logo-red-hat-black.png" width="90" height="auto"></a>
 
@@ -126,8 +140,15 @@ src="//www.redhat.com/cms/managed-files/summit_logo_170_0.png">
   S: <a href="https://snapchat.com/add/redhatsnaps" title="snapchat"  target="_blank" style="text-decoration:none; color:#777">@redhatsnaps</a>
 
 </div>
-<div class="social social-3">Employer Social</div>
+<div class="social social-3" style="color:#999;">
+  T: <a href="https://twitter.com/redhatjobs"        title="twitter"   target="_blank" style="text-decoration:none; color:#777">@redhatjobs</a> &nbsp;
+  I: <a href="https://instagram.com/redhatjobs"      title="instagram" target="_blank" style="text-decoration:none; color:#777">@redhatjobs</a> &nbsp;
+
 </div>
+
+</div>
+
+<div class="quote-container"  style="font-size: 10px; font-style:italic"><blockquote style="margin:0; font-size: 10px; font-style:italic"></blockquote></div>
 
 </div>
 

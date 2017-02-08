@@ -160,11 +160,18 @@ label[for="hideform"] {
   color: #000;
 }
 .options [type="radio"]:focus + label {
-  color: #c00;
+  color: 000;
+
 }
+.options [type="radio"]:focus + label{background-color: white}
 .options [type="radio"]:focus ~ span {
-  background-color: #c00;
-  height: .35em;
+  background-color: transparent;
+  top: 2.75em;focus
+  opacity: 0.4;
+  height: .4em; box-shadow: none;
+  animation: pulse 3s ease ;
+  box-shadow: 0 .2em #7cd5ee ;
+
 }
 
 @media (min-width: 55em) {
@@ -240,14 +247,14 @@ left: 0;
   display: block;
   height: .125em;
   padding: 0;
-  background-color: #555;
   position: absolute;
-  top: 2.75em;
-  opacity: 0.4;
-  width: 25%;
+    width: 25%;
   transition: all cubic-bezier(0.4, 0.1, 0.1, 1.3) 0.35s;
   left: 75%;
+  top:2.75em;
+  height: .25em; box-shadow: 0 .15em #7cd5ee
 }
+
 
 .options input:nth-child(1):checked ~ span {
   opacity: 1;
@@ -287,13 +294,20 @@ left: 0;
 [type="text"]:focus,
 [type="email"]:focus,
 [type="tel"]:focus {
-  box-shadow: 0 .22em #c00 !important;
+  box-shadow: 0 .22em #7cd5ee ;
+  animation: pulse 3s ease ;
 }
 
+@keyframes pulse {
+    50% {
+      box-shadow: 0 .22em #0aa6d9
+    }
+}
+
+
+[type="email"] ,
 [type="tel"] {
   width: 48%;
-}
-[type="tel"] + [type="tel"] { margin-left: 1%
 }
 
 /* Change Autocomplete styles in Chrome*/
@@ -308,8 +322,6 @@ select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
   background-color: transparent !important;
-  -webkit-text-fill-color: green;
-  -webkit-box-shadow: 0 0 0px 1000px #000 inset;
   transition: background-color 5000s ease-in-out 0s;
 }
 
@@ -465,7 +477,7 @@ textarea {
 }
 
 .preview input:focus + label {
-  box-shadow: 0 .2em #c00;
+  box-shadow: 0  0.2em #c00;
 }
 
 @keyframes flash {
@@ -494,12 +506,12 @@ textarea {
 
 /*error when too many values exist*/
 .sig-container {position:relative}
-.sig-container > :nth-child(12):before{content:"Too complex, please remove non-essential entries";  font-weight: 900; padding: 1em;position:absolute; top:0; left:0; right:0; bottom:0; background-color:#c00; color:white; font-size: 3em;
+.sig-container > :nth-child(12):before{content:"Too complex, please remove non-essential entries";  font-weight: 600; display:inline-block; vertical-align:bottom; padding: 10vh .5em; box-shadow: inset 0 0 0 .1em #c00;position:absolute; top:0; left:0; right:0; bottom:0;  font-style:regular;background-color:#c00; color:#c00; font-size: 3em;
 background: repeating-linear-gradient(
   -45deg,
-  rgba(0,0,0,0.25),
- rgba(0,0,0,0.25) 15px,
-  #c00 15px,
- #c00 20px
+  rgba(255,255,255,0.95),
+  rgba(255,255,255,0.95) 3px,
+  rgba(255,255,255,0.5) 3px,
+  rgba(255,255,255,0.5) 10px
 );
 }

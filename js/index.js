@@ -65,7 +65,22 @@ $("input.address2").on("change keyup paste", function(){
   }
 else {$(".address2-container").hide();
 }
+  updateHtmlSigRaw()
+});
 
+
+
+//
+// certifications
+$(".cert-container").hide();
+$("input.cert").on("change keyup paste", function(){
+  var cert = $(this).val();
+  if(cert) {
+    $(".cert-container").show();
+    $(".cert-container p").html(cert);
+  }
+else {$(".cert-container").hide();
+}
   updateHtmlSigRaw()
 });
 
@@ -73,7 +88,7 @@ else {$(".address2-container").hide();
 
 
 //
-// address
+// telephone
 $(".telephone-container").hide();
 
 $("input.telephone").on("change keyup paste", function(){
@@ -81,7 +96,8 @@ $("input.telephone").on("change keyup paste", function(){
   if(telephone) {
     $(".phone-numbers").show();
     $(".telephone-container").show();
-    $(".telephone-container span").html(telephone);
+    $(".telephone-container a").html(telephone);
+        $(".telephone-container").attr("href", "tel:"+telephone);
   }
 else {$(".telephone-container").hide();
 }
@@ -99,9 +115,31 @@ $("input.mobile").on("change keyup paste", function(){
   if(mobile) {
     $(".mobile-container").show();
     $(".phone-numbers").show();
-    $(".mobile-container span").html(mobile);
+    $(".mobile-container a").html(mobile);
+        $(".mobile-container").attr("href", "tel:"+mobile);
   }
 else {$(".mobile-container").hide();
+}
+
+  updateHtmlSigRaw()
+});
+
+
+
+//
+// fax
+$(".fax-container").hide();
+
+$("input.fax").on("change keyup paste", function(){
+  var fax = $(this).val();
+  if(fax) {
+    $(".fax-container").show();
+    $(".phone-numbers").show();
+    $(".fax-container a").html(fax);
+    $(".fax-container").attr("href", "tel:"+fax);
+
+  }
+else {$(".fax-container").hide();
 }
 
   updateHtmlSigRaw()
@@ -125,6 +163,21 @@ else {
   updateHtmlSigRaw()
 });
 
+//
+// legal entity
+
+$("input.legal").on("change keyup paste", function(){
+  var legal = $(this).val();
+  if(legal) {
+    $(".legal-container").show();
+    $(".legal-container").html(legal);
+  }
+else {
+}
+
+  updateHtmlSigRaw()
+});
+
 
 //
 // Position
@@ -137,6 +190,26 @@ $("input.position").on("change keyup paste", function(){
     $(".position-container p").html(fullname);
   }
 else {$(".position-container").hide();
+}
+
+  updateHtmlSigRaw()
+});
+
+
+
+
+
+//
+// Position
+$(".quote-container").hide();
+
+$("input.quote").on("change keyup paste", function(){
+  var fullname = $(this).val();
+  if(fullname) {
+    $(".quote-container").show();
+    $(".quote-container blockquote").html(fullname);
+  }
+else {$(".quote-container").hide();
 }
 
   updateHtmlSigRaw()
