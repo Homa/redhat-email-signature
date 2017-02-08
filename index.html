@@ -13,21 +13,21 @@
 <input type="checkbox" id="hideform"/>
 <label for="hideform">Form</label>
 <form>
-<h1 class="badge">Red Hat <span>Signature Tool</span></h1>
+<h1 class="badge">Red Hat <span>Signature Tool <em>PRE <br>Alpha</em></span></h1>
 
 <input type="text"  class="fullname"  placeholder="Full Name"/>
-<input type="text"  class="position"  placeholder="Job Title"/>
+<input type="text"  class="position"  placeholder="Job Title, Department"/>
 <input type="text"  class="cert"      placeholder="Certifications"/>
 
 <input type="text"  class="legal"      placeholder="Local Legal Entity" title="eg:  Inc / Asia Pacific Pte Ltd "/>
 <input type="text"  class="address"   placeholder="Address"/>
-<input type="text"  class="address2"  placeholder="Address Line2 (optional)"/>
+<input type="text"  class="address2"  placeholder="Address 2 - use sparingly"/>
 <input type="email" class="email"     placeholder="Email Address"/>
 <input type="tel"   class="mobile"    placeholder="Mobile Phone"/>
 <input type="tel"   class="telephone" placeholder="Desk Phone"/>
 <input type="tel"   class="fax" placeholder="Fax"/>
 
-
+<h3>Promotion</h3>
 <div class="promo-selector options">
 <input type="radio" name="promo-selector" id="promo-1" />
 <label for="promo-1" >Trusted</label>
@@ -42,7 +42,7 @@
 <label for="nopromo" >No Promo</label>
 <span></span></div>
 
-
+<h3>Social Media</h3>
 <div class="social-selector options">
 
 <input type="radio" name="social-selector" id="social-1" />
@@ -58,7 +58,6 @@
 <label for="nosocial" >No Social</label>
 <span></span></div>
 
-<input type="text" class="public-key" placeholder="Public Key"/>
 <input type="text" class="quote" placeholder="Quotable quote"/>
 
 
@@ -85,52 +84,63 @@
 </span>
 
 <span class="position-container">
-<p style="font-weight:normal; font-size:11px;  margin:0; text-transform: uppercase"></p>
+<p style="font-weight:normal; font-size:14px;  margin:0; text-transform: uppercase"></p>
 </span>
 
 <span class="cert-container">
-<p style="font-weight:normal; font-size:10px;  margin:0; "></p>
+<p style="font-weight:normal; font-size:10px; color:#aaa;  margin:0; "></p>
 </span>
-<p  style="font-weight:normal; margin:0; font-size:11px;">Red Hat <span class="legal-container"></span></p>
-
-<p class="email-container" style="margin:0;">
-  <a class="email_address_anchor" style="color:#0088ce;font-size:11px;margin:0;text-decoration:none;font-family:'overpass', sans-serif;" href="mailto:"><span class="output_email_address"></span></a>
-</p>
 
 
-<span class="address-container" style="font-size:11px; margin: 0 ;">
+<p  class="legal-container"  style="font-weight:normal; margin:0; font-size:11px;">Red Hat <span></span></p>
+
+
+<span class="address-container" style="font-size:10px; margin: 0 ;">
 <p style="font-size:11px; margin: 0 ;"></p>
 </span>
 <span class="address2-container" >
 <p style="font-size:11px; margin: 0 ;"></p>
 </span>
 
-<p class="phone-numbers"
-    style="font-weight:normal; margin:0; font-size:10px; color:#777; text-transform: uppercase">
+<p class="contact-container"
+    style="font-weight:normal; margin:0; font-size:10px; color:#777;  ">
+
+    <span class="email-container" style="margin:0; padding:0;">
+      <a class="email-anchor" style="color:#0088ce;font-size:10px;margin:0;text-decoration:none;font-family:'overpass', sans-serif;" href="mailto:"><span class="output_email_address"></span></a>
+       &nbsp; &nbsp;
+    </span>
+
     <span class="telephone-container">T: <a href="" style="color:#0088ce;font-size:11px;margin:0;text-decoration:none;font-family:'overpass', sans-serif;"></a> &nbsp; &nbsp;</span>
     <span class="mobile-container"   >M: <a href="" style="color:#0088ce;font-size:11px;margin:0;text-decoration:none;font-family:'overpass', sans-serif;"></a>  &nbsp; &nbsp;</span>
     <span class="fax-container"      >F: <a href="" style="color:#0088ce;font-size:11px;margin:0;text-decoration:none;font-family:'overpass', sans-serif;"></a></span>
 </p>
 
-<a href="https://redhat.com"> <img src="//www.redhat.com/profiles/rh/themes/redhatdotcom/img/logo-red-hat-black.png" width="90" height="auto"></a>
+<table border="0" cell-padding="0" cell-spacing="0">
+<tr>
+<td width="100px"><a href="https://redhat.com"> <img src="//www.redhat.com/profiles/rh/themes/redhatdotcom/img/logo-red-hat-black.png" width="90" height="auto"></a> </td>
 
 
-
-
-
-<div class="promo" style="font-weight:normal; font-size:10px; ">
-<div class="promo promo-1">Tried Tested Trusted</div>
+<td class="promo" style="font-weight:normal; font-size:10px; ">
+<div class="promo promo-1"><a href="https://redhat.com/trusted" style="text-decoration: none; color:#c00; font-weight: bold;">TRIED. TESTED. TRUSTED.</a></div>
 <div class="promo promo-2">
-<img width="70px"
+<a href="https://redhat.com/summit"  style="text-decoration:none;" target="_blank"><img outline="0" width="70px"
 height="auto"
 style="outline:0"
-src="//www.redhat.com/cms/managed-files/summit_logo_170_0.png">
+src="https://www.redhat.com/cms/managed-files/summit_logo_170_0.png" /></a>
 </div>
 
+<div class="promo promo-3">
 
-<div class="promo promo-3">Red Hat Forums - Coming to a city near you</div>
-</div>
+  <a href="https://www.redhat.com/en/about/events?f[0]=field_event_type%3A531&rset1_format=list"  style="text-decoration:none;" target="_blank">
+  <img width="80px"
+  height="auto"
+  style="outline:0"
+  src="https://s3.amazonaws.com/media-p.slid.es/uploads/team-32/images/2697597/forum-logo.svg
+"></a></div>
+</td>
 
+
+</tr></table>
 
 <div class="social" style="font-weight:normal; font-size:10px;">
 <div class="social social-1"  style="color:#999;">
@@ -151,35 +161,40 @@ src="//www.redhat.com/cms/managed-files/summit_logo_170_0.png">
 
 </div>
 
-<div class="quote-container"  style="font-size: 10px; font-style:italic"><blockquote style="margin:0; font-size: 10px; font-style:italic"></blockquote></div>
+<div class="quote-container"  style="margin: 1em 0;font-size: 10px; font-style:italic"><blockquote style="margin:0; font-size: 10px; font-style:italic"></blockquote></div>
 
 </div>
 
 <div class="plaintext sig-container">
-  <span class="fullname-container">
-  <p></p>
-  </span>
-  <span class="position-container">
-  <p></p>
-  </span>
 
+  <span class="fullname-container"><p>FIRSTNAME LASTNAME</p></span>
+  <span class="position-container"><p></p></span>
+  <span class="cert-container"><p></p></span><br>
+  <p    class="legal-container"> Red Hat <span></span></p>
+  <span class="address-container"><p></p> </span>
+  <span class="address2-container" ><p></p></span>
+  <p class="contact-container">
+      <span class="email-container"> <span class="email-anchor"><span class="output_email_address"></span></span> &nbsp; &nbsp; </span>
+      <span class="telephone-container">T: <a></a> &nbsp; &nbsp;</span>
+      <span class="mobile-container"   >M: <a></a>  &nbsp; &nbsp;</span>
+      <span class="fax-container"      >F: <a></a></span></p>
 
-  <span class="address-container">
-  <p></p>
-  </span>
-  <span class="address2-container">
-  <p></p>
-  </span>
+  <p>
+    <span class="promo">
+      www.redhat.com  |
+      <span class="promo promo-1">TRIED. TESTED. TRUSTED. | redhat.com/trusted</span>
+      <span class="promo promo-2"> Red Hat Summit | redhat.com/summit </span>
+      <span class="promo promo-3">Red Hat Forum - We are coming to a city near you</span>
+    </span>
+  </p>
 
+  <div class="social" >
+  <div class="social social-1" > Twitter: @redhatnews | linkedin.com/company/red-hat  </div>
+  <div class="social social-2" > Twitter:  @redhatway  | Instagram: @redhatinc |  Snapchat: @redhatsnaps </div>
+  <div class="social social-3" > Twitter: @redhatjobs  |  Instagram: @redhatjobs  </div>
+  </div>
 
-<div class="promo promo-1">Tried Tested Trusted</div>
-<div class="promo promo-2">Red Hat Summit - Boston</div>
-<div class="promo promo-3">Red Hat Forums - Coming to a city near you</div>
-
-<div class="social social-1">Follow Red Hat:  @redhatnews  |  linkedin.com/company/red-hat</div>
-<div class="social social-2">Comms Social</div>
-<div class="social social-3">Employer Social</div>
-
+  <div class="quote"><blokquote></blockquote></div>
 </div>
 
 <div class="sig-container html" id="html">
@@ -194,6 +209,8 @@ Type something in the editor
 
 <div class="sig-container help"  >
 <h1>How to use your signature</h1>
+<p>Click the box and copy to your clipboard</p>
+<p>Detailed instructions soon </p>
 </div>
 </section>
 <script src="js/index.js"></script>

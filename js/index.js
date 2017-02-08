@@ -1,10 +1,18 @@
+$container = $('.plaintext');
+
+
+
 // Place raw HTML of each version into appropriate containers
 function updateHtmlSigRaw() {
   get_html_signature = document.getElementById("full-sig").innerHTML;
   $("#html textarea").text(get_html_signature);
 
+   // $container.html($container.text());
+
   $("#html textarea").prepend('&lt;style&gt; @import url(overpass-30e2.kxcdn.com/overpass.css); &lt;/style&gt;').text;
  }
+
+
 
 
 
@@ -86,6 +94,7 @@ else {$(".cert-container").hide();
 
 
 
+$(".contact-container").hide();
 
 //
 // telephone
@@ -94,7 +103,7 @@ $(".telephone-container").hide();
 $("input.telephone").on("change keyup paste", function(){
   var telephone = $(this).val();
   if(telephone) {
-    $(".phone-numbers").show();
+    $(".contact-container").show();
     $(".telephone-container").show();
     $(".telephone-container a").html(telephone);
         $(".telephone-container").attr("href", "tel:"+telephone);
@@ -114,7 +123,7 @@ $("input.mobile").on("change keyup paste", function(){
   var mobile = $(this).val();
   if(mobile) {
     $(".mobile-container").show();
-    $(".phone-numbers").show();
+    $(".contact-container").show();
     $(".mobile-container a").html(mobile);
         $(".mobile-container").attr("href", "tel:"+mobile);
   }
@@ -134,7 +143,7 @@ $("input.fax").on("change keyup paste", function(){
   var fax = $(this).val();
   if(fax) {
     $(".fax-container").show();
-    $(".phone-numbers").show();
+    $(".contact-container").show();
     $(".fax-container a").html(fax);
     $(".fax-container").attr("href", "tel:"+fax);
 
@@ -165,12 +174,13 @@ else {
 
 //
 // legal entity
+$(".legal-container").hide();
 
 $("input.legal").on("change keyup paste", function(){
   var legal = $(this).val();
   if(legal) {
     $(".legal-container").show();
-    $(".legal-container").html(legal);
+    $(".legal-container span").html(legal);
   }
 else {
 }
@@ -229,13 +239,16 @@ else {$(".quote-container").hide();
 //
 // Email address
 // Check input field for data
-$(".email").on("change keyup paste", function(){
-  var email_address = $(this).val();
-  if(email_address) {
-        $(".email_element").show();
+$(".email-container").hide();
 
-    $("span.output_email_address").html(email_address);
-    $(".email_address_anchor").attr("href", "mailto:"+email_address);
+$(".email").on("change keyup paste", function(){
+  var email = $(this).val();
+  if(email) {
+        $(".email-container").show();
+        $(".contact-container").show();
+
+    $(".email-anchor").html(email);
+    $(".email-anchor").attr("href", "mailto:"+email);
   } else {
   }
   updateHtmlSigRaw()
