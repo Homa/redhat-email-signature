@@ -93,7 +93,7 @@ form {
 
 .preview {
   height: 100vh;
-  background: #fff linear-gradient(to left, transparent 0%, #eee 100%);
+  background: #f3f3f3 /*linear-gradient(to left, transparent 0%, #ccc 100%)*/;
   background-repeat: repeat-y;
   background-size: .5em;
   background-position: top left;
@@ -279,7 +279,7 @@ left: 0;
   transition: all cubic-bezier(0.4, 0.1, 0.1, 1.3) 0.35s;
   left: 75%;
   top:3.2em;
-  height: .25em; box-shadow: 0 .15em #789
+  height: .25em; box-shadow: 0 .15em #ccc
 }
 
 
@@ -398,12 +398,12 @@ input:-webkit-autofill, select:-webkit-autofill, textarea:-webkit-autofill {
   height: 3em;
   line-height: 3em;
   text-align: center;
-  background-color: #eee;
+  background-color: rgba(0,0,0,0.1);
   margin: 0;
   padding: 0;
   appearance: none;
   outline: 0;
-  color: #aaa;
+  color: #555;
 }
 
  #normal-view, #normal-view + label,
@@ -457,7 +457,7 @@ h1{line-height:1em; font-weight: 500;}
 .preview input:checked ~ .sig-container{}
 
 @keyframes loadsig{
-  0%{transform:scale(1.02195); opacity:0}
+  0%{transform:scale(.972195); opacity:0}
 }
 
 
@@ -529,11 +529,22 @@ a,label,input{-webkit-tap-highlight-color: rgba(0,0,0,0);}
 
 
 
+.sig-container > .btn{font-family: overpass, sans-serif !important; font-size: 2em !important;margin:1em 0 !important; display:block;appearance:none; width: 100%; height:3em; line-height: 3em; border:none; cursor:pointer;
+    border-color: #c00; border-width: 2px !important; border-style:solid;
+    background: linear-gradient(-45deg,transparent 50%,#c00 50.01%,#c00 100%);
+    background-size: 250%;
+    text-align:center;
+    background-position: 100% 100%;
+    transition: background-position .2s linear, color .2s ease-out
+    ,background-color .1s ease-out .2s
+}
 
-
-
-
-
+.sig-container > .btn:active,
+.sig-container > .btn:focus,
+.sig-container > .btn:hover {
+    background-position: 0% 0%;
+    color: #fff;
+}
 
 
 

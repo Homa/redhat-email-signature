@@ -1,5 +1,4 @@
-$container = $('.plaintext');
-
+document.addEventListener("touchstart", function(){}, true);
 
 
 // Place raw HTML of each version into appropriate containers
@@ -7,7 +6,6 @@ function updateHtmlSigRaw() {
   get_html_signature = document.getElementById("full-sig").innerHTML;
   $("#html textarea").text(get_html_signature);
 
-   // $container.html($container.text());
 
   $("#html textarea").prepend('&lt;style&gt; @import url(overpass-30e2.kxcdn.com/overpass.css); &lt;/style&gt;').text;
  }

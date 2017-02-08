@@ -19,7 +19,7 @@
 <input type="text"  class="position"  placeholder="Job Title, Department"/>
 <input type="text"  class="cert"      placeholder="Certifications"/>
 
-<input type="text"  class="legal"      placeholder="Local Legal Entity" title="eg:  Inc / Asia Pacific Pte Ltd "/>
+<input type="text"  class="legal"      placeholder="Local Legal Entity Type" title="eg:  Inc / Asia Pacific Pte Ltd "/>
 <input type="text"  class="address"   placeholder="Address"/>
 <input type="text"  class="address2"  placeholder="Address 2 - use sparingly"/>
 <input type="email" class="email"     placeholder="Email Address"/>
@@ -76,7 +76,7 @@
 <label for="html-view">HTML Code</label>
 
 <input type="radio" name="preview"  id="help" />
-<label for="help">Help</label>
+<label for="help">Howto</label>
 
 
 <div class="standard sig-container" id="full-sig">
@@ -166,7 +166,8 @@ src="https://www.redhat.com/cms/managed-files/summit_logo_170_0.png" /></a>
 </div>
 
 <div class="plaintext sig-container">
-
+<!-- <a class="btn" data-clipboard-action="cut" data-clipboard-target="#select-text" >Copy to clipboard</a> -->
+<div  id="select-text">
   <span class="fullname-container"><p>FIRSTNAME LASTNAME</p></span>
   <span class="position-container"><p></p></span>
   <span class="cert-container"><p></p></span><br>
@@ -196,6 +197,7 @@ src="https://www.redhat.com/cms/managed-files/summit_logo_170_0.png" /></a>
 
   <div class="quote"><blokquote></blockquote></div>
 </div>
+</div>
 
 <div class="sig-container html" id="html">
 
@@ -213,6 +215,7 @@ Type something in the editor
 <p>Detailed instructions soon </p>
 </div>
 </section>
+<script src="js/clipboard.min.js"></script>
 <script src="js/index.js"></script>
 
 </body>
