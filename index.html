@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Email Signature Generator</title>
+  <link href="css/style.css"                  rel="stylesheet" />
+  <link href="fonts/overpass.css"             rel="stylesheet" />
+  <link href="fonts/overpass-mono.css"        rel="stylesheet" />
+  <script src="js/jquery-3.1.1.js"></script>
+</head>
+<body>
+
+<input type="checkbox" id="hideform"/>
+<label for="hideform">Form</label>
+<form>
+<h1>Red Hat <span>Signature Tool</span></h1>
+
+<input type="text" class="fullname" placeholder="Full Name"/>
+<input type="text" class="position" placeholder="Job Title"/>
+<input type="email" class="email" placeholder="Email Address"/>
+<input type="text" class="address" placeholder="Address"/>
+<input type="text" class="address2" placeholder="Address Line2 (optional)"/>
+<input type="tel"  class="mobile" placeholder="Mobile Phone"/>
+<input type="tel"  class="telephone" placeholder="Desk Phone"/>
+
+
+<div class="promo-selector options">
+<input type="radio" name="promo-selector" id="promo-1" />
+<label for="promo-1" >Trusted</label>
+
+<input type="radio" name="promo-selector" id="promo-2" />
+<label for="promo-2" >Summit</label>
+
+<input type="radio" name="promo-selector" id="promo-3" />
+<label for="promo-3" >Forums</label>
+
+<input type="radio" name="promo-selector" id="nopromo" checked/>
+<label for="nopromo" >No Promo</label>
+<span></span></div>
+
+
+<div class="social-selector options">
+
+<input type="radio" name="social-selector" id="social-1" />
+<label for="social-1" >Business</label>
+
+<input type="radio" name="social-selector" id="social-2" />
+<label for="social-2" >Culture</label>
+
+<input type="radio" name="social-selector" id="social-3" />
+<label for="social-3" >Recruiting</label>
+
+<input type="radio" name="social-selector" id="nosocial" checked/>
+<label for="nosocial" >No Social</label>
+<span></span></div>
+
+<input type="text" class="public-key" placeholder="Public Key"/>
+<input type="text" class="RHCE #" placeholder="RHCT / RHCE / RHCA #"/>
+
+
+</form>
+
+
+
+<section class="preview">
+<input type="radio" name="preview"  id="normal-view" checked />
+<label for="normal-view">Full Version</label>
+
+<input type="radio" name="preview"  id="text-view"/>
+<label for="text-view">Plain Text</label>
+
+<input type="radio" name="preview"  id="html-view" />
+<label for="html-view">HTML Code</label>
+
+
+<div class="standard sig-container" id="full-sig">
+<span class="fullname-container">
+<p style="font-weight:bold; font-size: 14px; text-transform: uppercase; margin-bottom:0;">FIRSTNAME LASTNAME</p>
+</span>
+
+<span class="position-container">
+<p style="font-weight:normal; font-size:11px;  margin-top:0; text-transform: uppercase"></p>
+</span>
+<span class="email-container" style="margin:0;"><a class="email_address_anchor" style="color:#0088ce;font-size:11px;text-decoration:none;font-family:'overpass', sans-serif;" href="mailto:"><span class="output_email_address"></span></a></span>
+
+<p  style="font-weight:normal; font-size:11px;">Red Hat <span class="legal-container"></span></p>
+
+<span class="address-container" style="font-size:11px; margin: 0 ;">
+<p style="font-size:11px; margin: 0 ;"></p>
+</span>
+<span class="address2-container" >
+<p style="font-size:11px; margin: 0 ;"></p>
+</span>
+
+<p class="phone-numbers" style="font-weight:normal; font-size:10px; text-transform: uppercase"><span class="telephone-container">T: <span> </span> &nbsp; &nbsp;</span>
+<span class="mobile-container">M: <span></span></span></p>
+
+<a href="https://redhat.com"> <img src="//www.redhat.com/profiles/rh/themes/redhatdotcom/img/logo-red-hat-black.png" width="90" height="auto"></a>
+
+
+
+
+
+<div class="promo" style="font-weight:normal; font-size:10px; ">
+<div class="promo promo-1">Tried Tested Trusted</div>
+<div class="promo promo-2">
+<img width="70px"
+height="auto"
+style="outline:0"
+src="//www.redhat.com/cms/managed-files/summit_logo_170_0.png">
+</div>
+
+
+<div class="promo promo-3">Red Hat Forums - Coming to a city near you</div>
+</div>
+
+
+<div class="social" style="font-weight:normal; font-size:10px;">
+<div class="social social-1"  style="color:#999;">
+  T: <a href="https://twitter.com/redhatnews"        title="twitter"   target="_blank" style="text-decoration:none; color:#777">@redhatnews</a> &nbsp;
+  L: <a href="https://www.linkedin.com/company/red-hat"  title="LinkedIn" target="_blank" style="text-decoration:none; color:#777">LinkedIn</a>
+</div>
+<div class="social social-2" style="color:#999;">
+  T: <a href="https://twitter.com/redhatway"        title="twitter"   target="_blank" style="text-decoration:none; color:#777">@redhatway</a> &nbsp;
+  I: <a href="https://instagram.com/redhatinc"      title="instagram" target="_blank" style="text-decoration:none; color:#777">@redhatinc</a> &nbsp;
+  S: <a href="https://snapchat.com/add/redhatsnaps" title="snapchat"  target="_blank" style="text-decoration:none; color:#777">@redhatsnaps</a>
+
+</div>
+<div class="social social-3">Employer Social</div>
+</div>
+
+</div>
+
+<div class="plaintext sig-container">
+  <span class="fullname-container">
+  <p></p>
+  </span>
+  <span class="position-container">
+  <p></p>
+  </span>
+
+
+  <span class="address-container">
+  <p></p>
+  </span>
+  <span class="address2-container">
+  <p></p>
+  </span>
+
+
+<div class="promo promo-1">Tried Tested Trusted</div>
+<div class="promo promo-2">Red Hat Summit - Boston</div>
+<div class="promo promo-3">Red Hat Forums - Coming to a city near you</div>
+
+<div class="social social-1">Follow Red Hat:  @redhatnews  |  linkedin.com/company/red-hat</div>
+<div class="social social-2">Comms Social</div>
+<div class="social social-3">Employer Social</div>
+
+</div>
+
+<div class="sig-container html" id="html">
+
+<textarea class="form-control" rows="10">
+Type something in the editor
+</textarea>
+
+</div>
+</section>
+<script src="js/index.js"></script>
+
+</body>
+</html>

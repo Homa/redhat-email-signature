@@ -1,0 +1,505 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 101vh;
+}
+
+h1 {
+  text-transform: uppercase;
+  line-height: 3em;
+  font-weight: 800;
+  font-size: 1em;
+  text-align: center;
+  letter-spacing: .05em;
+  color: #c00;
+  padding: 0.666em;
+}
+
+h1 span {
+  font-weight: 700;
+  position: relative;
+  background-color: #c00;
+  color: #fff;
+  display: inline-block;
+  white-space: nowrap;
+  padding: 0em 0.5em;
+  height: 2em;
+  line-height: 2em;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10' preserveAspectRatio='none' style='fill:#a00'%3E %3Cpath d='M 10,0 10,10 0,10 Z'/%3E %3C/svg%3E");
+}
+
+body, input {
+  font-family: overpass,sans-serif;
+}
+
+h3 {
+  font-weight: 500;
+  text-align: center;
+  font-size: .85em;
+  text-transform: uppercase;
+  padding-top: 2em;
+}
+
+.standard {
+  margin: 1em 0;
+}
+
+.plaintext {
+  font-family: overpass-mono, monospace;
+  font-size: 10px;
+}
+
+form {
+  line-height: 3em;
+  overflow: hidden;
+  overflow-y:auto;
+  max-height: 100vh;
+  transition: all .5s ease;
+  min-height: 5em;
+  background-color: #fafafa;
+  height: 100vh;
+  padding: 1em 2em;
+  position: relative;
+
+}
+
+.preview {
+  height: 100vh;
+  background: #eee linear-gradient(to left, transparent 0%, #ddd 100%);
+  background-repeat: repeat-y;
+  background-size: .5em;
+  background-position: top left;
+}
+
+label[for="hideform"] {
+  padding: 0 1em;
+  cursor: pointer;
+  user-select: none;
+  background-color: #222;
+  transition: all .3s ease;
+  display: block;
+  width: 9em;
+  line-height: 3em;
+  height: 3em;
+  color: white;
+  position: relative;
+  z-index: 9;
+}
+label[for="hideform"]:before {
+  content: "Hide ";
+}
+
+[id="hideform"] {
+  display: none;
+}
+[id="hideform"]:checked ~ label[for="hideform"] {
+  background-color: #c00;
+  color: white;
+  width: 10em;
+  top: auto; bottom:0;
+}
+[id="hideform"]:checked ~ label[for="hideform"]:before {
+  content: "Show ";
+}
+[id="hideform"]:checked ~ form {
+  max-height: 0;
+  min-height: 0;
+  height: 0;
+  opacity: 0;
+  padding:0; margin:0;
+}
+
+label[for="hideform"] {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.options {
+  padding: 0;
+  margin: 0;
+  height: 3em;
+  white-space: nowrap;
+}
+
+.options label {
+  cursor: pointer;
+  padding: .5em 0;
+  transition: box-shadow .15s ease;
+  color: #777;
+  width: 25%;
+  margin: 0;
+  display: inline-block;
+  float: left;
+  text-align: center;
+}
+
+.options {
+  clear: both;
+}
+
+.options [type="radio"] {
+  cursor: pointer;
+  position: absolute;
+  appearance: none;
+  display: inline-block;
+  float: left;
+  width: 25%;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  opacity: 0;
+  height: 4.5em;
+  z-index: 9;
+}
+.options [type="radio"]:checked + label {
+  color: #000;
+}
+.options [type="radio"]:focus + label {
+  color: #c00;
+}
+.options [type="radio"]:focus ~ span {
+  background-color: #c00;
+  height: .35em;
+}
+
+@media (min-width: 55em) {
+  .options {
+    position: relative;
+}
+
+
+  [for="hideform"] {
+    display: none !important;
+  }
+
+[id="hideform"]:checked ~ label[for="hideform"] {
+    display: block !important;
+  }
+
+
+
+form{width: 50%;position: absolute;
+top: 0;
+left: 0;
+
+
+}
+
+
+  [for="hideform"] {
+    display: none !important;
+  }
+
+[id="hideform"]:checked ~ label[for="hideform"] {
+    display: block !important;
+  }
+
+
+
+    .preview {
+      margin-left: 50%;
+
+    }
+}
+@media (min-width: 70em) {
+  form {
+    width: 33.333%;
+    height: 100vh;
+    transition: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .preview {
+    margin-left: 33.33333%;
+    padding-left: 2em;
+  }
+}
+.options {
+  position: relative;
+}
+
+.options:nth-child(odd) {
+
+}
+
+.options:nth-child(odd):before {
+  content: "";
+  display: block;
+  top: 0;
+  height: 3em;
+  position: absolute;
+}
+
+.options > span {
+  display: block;
+  height: .125em;
+  padding: 0;
+  background-color: #555;
+  position: absolute;
+  top: 2.75em;
+  opacity: 0.4;
+  width: 25%;
+  transition: all cubic-bezier(0.4, 0.1, 0.1, 1.3) 0.35s;
+  left: 75%;
+}
+
+.options input:nth-child(1):checked ~ span {
+  opacity: 1;
+  left: 0;
+}
+
+.options input:nth-child(3):checked ~ span {
+  opacity: 1;
+  left: 25%;
+}
+
+.options input:nth-child(5):checked ~ span {
+  opacity: 1;
+  left: 50%;
+}
+
+.options input:nth-child(7):checked ~ span {
+  opacity: 1;
+  left: 75%;
+}
+
+
+[type="text"],
+[type="email"],
+[type="tel"] {
+  transition: box-shadow 0.3s cubic-bezier(0.2, 0.1, 0.1, 1.5);
+  outline: 0;
+  background-color: transparent !important;
+  font-weight: 400;
+  font-size: 1em;
+  padding: 0.5em 1em;
+  box-shadow: 0 1px #ddd;
+  border: 0;
+  border-radius: 0;
+  width: 100%;
+}
+[type="text"]:focus,
+[type="email"]:focus,
+[type="tel"]:focus {
+  box-shadow: 0 .22em #c00 !important;
+}
+
+[type="tel"] {
+  width: 48%;
+}
+[type="tel"] + [type="tel"] { margin-left: 1%
+}
+
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  background-color: transparent !important;
+  -webkit-text-fill-color: green;
+  -webkit-box-shadow: 0 0 0px 1000px #000 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+
+input:-webkit-autofill, select:-webkit-autofill, textarea:-webkit-autofill {
+    background-color: #fff!important;
+    -webkit-box-shadow: 0 0 0 1000px #fff inset, 0 0.2em 0.5em #ccc;
+    border-color: #fff!important;
+    animation: none!important;}
+
+
+.sig-container {
+  user-select: all;
+  max-width: 90%;
+  min-width: 30%;
+  zoom:1.5;
+  min-height: 50vh;
+
+  padding: 2em;
+  box-shadow: 0 0.1em 0.75em rgba(0, 0, 0, 0.15);
+  margin: 2em auto;
+  background-color: white;
+}
+
+
+
+
+
+.sig-container {
+  margin-top: 0em;
+}
+
+.preview {
+  position: relative;
+  top: 0;
+  margin-top: 0;
+  padding-top: 4em;
+}
+
+.preview > input,
+.preview > label {
+  cursor: pointer;
+  width: 33.3%;
+  position: absolute;
+  top: 0;
+  display: block;
+  height: 3em;
+  line-height: 3em;
+  text-align: center;
+  background-color: #ddd;
+  margin: 0;
+  padding: 0;
+  appearance: none;
+  outline: 0;
+  color: #777;
+}
+.preview > input:nth-child(1), .preview > input:nth-child(2),
+.preview > label:nth-child(1),
+.preview > label:nth-child(2) {
+  left: 0;
+}
+.preview > input:nth-child(3), .preview > input:nth-child(4),
+.preview > label:nth-child(3),
+.preview > label:nth-child(4) {
+  left: 33%;
+}
+.preview > input:nth-child(5), .preview > input:nth-child(6),
+.preview > label:nth-child(5),
+.preview > label:nth-child(6) {
+  left: 66%;
+}
+
+.preview > input {
+  box-shadow: 0 0 .2em;
+  opacity: 0;
+  height: 4em;
+}
+.preview > input:checked + label {
+  background-color: transparent;
+  color: #222;
+}
+
+.sig-container {
+  display: none;
+}
+
+.preview input:nth-child(1):checked ~ .sig-container.standard {
+  display: block;
+  animation:loadsig 1s cubic-bezier(.2,.1,.1,1.3) 1;
+}
+
+.preview input:nth-child(3):checked ~ .sig-container.plaintext {
+  display: block;
+  animation:loadsig 1s cubic-bezier(.2,.1,.1,1.3) 1;
+}
+
+.preview input:nth-child(5):checked ~ .sig-container.html {
+  display: block;
+  animation:loadsig 1s cubic-bezier(.2,.1,.1,1.3) 1;
+}
+
+
+.preview input:checked ~ .sig-container{}
+
+@keyframes loadsig{
+  0%{transform:scale(.9); opacity:0}
+}
+
+
+.sig-container{position:relative}
+textarea {
+
+  position:absolute; top:0; left:0; right:0; bottom:0; height: 100%; width: 100%;
+  padding: 1em 2em;
+  background-color:#333; color: white; font-family: overpass-mono, monospace;
+  white-space: pre;
+  font-weight: 300;
+  user-select: all;
+  border: 0;
+  outline: 0;overflow:hidden;
+  overflow-x: hidden !important ;
+  overflow-y: scroll !important ;
+  font-size: 9px;
+}
+
+.preview {
+  position: relative;
+}
+
+.preview input + label:before {
+  content: "";
+  background-color: transparent;
+  position: absolute;
+  display: block;
+  top: 50%;
+  z-index: 0;
+  margin: 0 auto;
+  left: 50%;
+  margin-top: -3em;
+  margin-left: -3em;
+  border-radius: 50%;
+  height: 6em;
+  width: 6em;
+  transform: scale(0.01);
+}
+
+.preview label {
+  overflow: hidden;
+}
+
+.preview input:checked + label:before {
+  animation: flash .335s linear forwards;
+}
+
+.preview input:focus + label {
+  box-shadow: 0 .2em #c00;
+}
+
+@keyframes flash {
+  0% {
+    transform: scale(0.1);
+  }
+  60% {
+    background-color: white;
+  }
+  100% {
+    transform: scale(2.3);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*error when too many values exist*/
+.sig-container {position:relative}
+.sig-container > :nth-child(12):before{content:"Too complex, please remove non-essential entries";  font-weight: 900; padding: 1em;position:absolute; top:0; left:0; right:0; bottom:0; background-color:#c00; color:white; font-size: 3em;
+background: repeating-linear-gradient(
+  -45deg,
+  rgba(0,0,0,0.25),
+ rgba(0,0,0,0.25) 15px,
+  #c00 15px,
+ #c00 20px
+);
+}
