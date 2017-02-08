@@ -13,7 +13,7 @@
 <input type="checkbox" id="hideform"/>
 <label for="hideform">Form</label>
 <form>
-<h1>Red Hat <span>Signature Tool</span></h1>
+<h1 class="badge">Red Hat <span>Signature Tool</span></h1>
 
 <input type="text"  class="fullname"  placeholder="Full Name"/>
 <input type="text"  class="position"  placeholder="Job Title"/>
@@ -71,10 +71,13 @@
 <label for="normal-view">Full Version</label>
 
 <input type="radio" name="preview"  id="text-view"/>
-<label for="text-view">Plain Text</label>
+<label for="text-view">Text</label>
 
 <input type="radio" name="preview"  id="html-view" />
 <label for="html-view">HTML Code</label>
+
+<input type="radio" name="preview"  id="help" />
+<label for="help">Help</label>
 
 
 <div class="standard sig-container" id="full-sig">
@@ -185,6 +188,12 @@ src="//www.redhat.com/cms/managed-files/summit_logo_170_0.png">
 Type something in the editor
 </textarea>
 
+</div>
+
+
+
+<div class="sig-container help"  >
+<h1>How to use your signature</h1>
 </div>
 </section>
 <script src="js/index.js"></script>
