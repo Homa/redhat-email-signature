@@ -31,14 +31,14 @@ animation: beta-wobble 6s cubic-bezier(.1,.1,.1,2) infinite ;
 .badge {user-select:none;
 position:relative;
   text-transform: uppercase;
-  line-height: 3em;
+  line-height: 1em;
   font-weight: 800;
   font-size: 1em;
   cursor:normal;
   text-align: center;
   letter-spacing: .05em;
   color: #c00;
-  padding: 0.666em;
+  padding: 0.666em 0;
 }
 
 .badge span {
@@ -105,7 +105,8 @@ label[for="hideform"] {
   padding: 0 1em;
   cursor: pointer;
   user-select: none;
-  background-color: #222;
+  background-color: rgba(20,20,20,0.8);
+
   transition: all .3s ease;
   display: block;
   width: 9em;
@@ -127,7 +128,7 @@ label[for="hideform"]:before {
   color: white;
   width: 10em;
   z-index:9;
-  top: auto; bottom:0;
+  top: 3em;
 }
 [id="hideform"]:checked ~ label[for="hideform"]:before {
   content: "Show ";
@@ -142,7 +143,7 @@ label[for="hideform"]:before {
 
 label[for="hideform"] {
   position: fixed;
-  bottom: 0;
+  top: 5em;
   right: 0;
 }
 
@@ -386,6 +387,8 @@ input:-webkit-autofill, select:-webkit-autofill, textarea:-webkit-autofill {
 }
 
 
+h4{margin:0 auto; text-align:center; max-width: 12em; line-height:1.3em; font-weight: 900; padding: .333em 0; border: .2em solid; border-style: solid none;}
+
 
 
 
@@ -514,7 +517,7 @@ a,label,input{-webkit-tap-highlight-color: rgba(0,0,0,0);}
 }
 
 .preview label {
-
+overflow:hidden;
  z-index:1;
 }
 
@@ -533,7 +536,7 @@ a,label,input{-webkit-tap-highlight-color: rgba(0,0,0,0);}
     transform: scale(0.1);
   }
   60% {
-    background-color: rgba(0,0,0,0.1);
+    background-color: #fff;
   }
   100% {
     transform: scale(2.53);
