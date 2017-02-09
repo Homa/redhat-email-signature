@@ -94,11 +94,8 @@ form {
 
 .preview {
   height: 100vh;
-<<<<<<< HEAD
-  background-color: #f4f4f4 ;
-=======
   background: #f3f3f3 /*linear-gradient(to left, transparent 0%, #ccc 100%)*/;
->>>>>>> 713a6bbe804d92378bc678327819fd1f6b287148
+
   background-repeat: repeat-y;
   background-size: .5em;
   background-position: top left;
@@ -285,11 +282,7 @@ left: 0;
   transition: all cubic-bezier(0.4, 0.1, 0.1, 1.3) 0.35s;
   left: 75%;
   top:3.2em;
-<<<<<<< HEAD
   height: .25em; box-shadow: 0 .15em #aaa
-=======
-  height: .25em; box-shadow: 0 .15em #ccc
->>>>>>> 713a6bbe804d92378bc678327819fd1f6b287148
 }
 
 
@@ -322,11 +315,7 @@ left: 0;
   background-color: transparent !important;
   font-weight: 400;
   font-size: 1em;
-<<<<<<< HEAD
-  padding: 0.5em 0em;
-=======
   padding: 0.5em 0;
->>>>>>> 713a6bbe804d92378bc678327819fd1f6b287148
   box-shadow: 0 1px #eee;
   border: 0;
   border-radius: 0;
@@ -390,13 +379,9 @@ input:-webkit-autofill, select:-webkit-autofill, textarea:-webkit-autofill {
   min-height: 50vh;
 
   padding: 2em;
-<<<<<<< HEAD
-  box-shadow: 0 0.1em 2.75em rgba(0, 0, 0, 0.15);
-  margin: 2em auto !important;
-=======
+
   box-shadow: 0 0.1em 3.75em rgba(0, 0, 0, 0.15);
-  margin: 2em auto;
->>>>>>> 713a6bbe804d92378bc678327819fd1f6b287148
+  margin: 2em auto !important;
   background-color: white;
 }
 
@@ -425,11 +410,7 @@ input:-webkit-autofill, select:-webkit-autofill, textarea:-webkit-autofill {
   height: 3em;
   line-height: 3em;
   text-align: center;
-<<<<<<< HEAD
   background-color: #e5e5e5;
-=======
-  background-color: rgba(0,0,0,0.1);
->>>>>>> 713a6bbe804d92378bc678327819fd1f6b287148
   margin: 0;
   padding: 0;
   appearance: none;
@@ -488,11 +469,7 @@ h1{line-height:1em; font-weight: 500;}
 .preview input:checked ~ .sig-container{}
 
 @keyframes loadsig{
-<<<<<<< HEAD
   0%{transform:scale(.9802195); opacity:0}
-=======
-  0%{transform:scale(.972195); opacity:0}
->>>>>>> 713a6bbe804d92378bc678327819fd1f6b287148
 }
 
 
@@ -537,11 +514,8 @@ a,label,input{-webkit-tap-highlight-color: rgba(0,0,0,0);}
 }
 
 .preview label {
-<<<<<<< HEAD
-z-index:1;
-=======
+
  z-index:1;
->>>>>>> 713a6bbe804d92378bc678327819fd1f6b287148
 }
 
 .preview input:checked + label:before {
