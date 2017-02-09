@@ -80,14 +80,16 @@ else {$(".address2-container").hide();
 
 //
 // certifications
-$(".cert-container").hide();
-$("input.cert").on("change keyup paste", function(){
+$(".cert").hide();
+$("input.certs").on("change keyup paste", function(){
   var cert = $(this).val();
   if(cert) {
-    $(".cert-container").show();
-    $(".cert-container p").html(cert);
+
+    $(".position-container").show();
+    $(".cert").show();
+    $(".cert span").html(cert);
   }
-else {$(".cert-container").hide();
+else {$(".cert").hide();
 }
   updateHtmlSigRaw()
 });
@@ -197,7 +199,7 @@ $("input.position").on("change keyup paste", function(){
   var fullname = $(this).val();
   if(fullname) {
     $(".position-container").show();
-    $(".position-container p").html(fullname);
+    $(".position-container .position").html(fullname);
   }
 else {$(".position-container").hide();
 }

@@ -18,7 +18,7 @@
 
 <input type="text"  class="fullname"  placeholder="Full Name"/>
 <input type="text"  class="position"  placeholder="Job Title, Department"/>
-<input type="text"  class="cert"      placeholder="Certifications"/>
+<input type="text"  class="certs"      placeholder="Certifications"/>
 
 <input type="text"  class="legal"      placeholder="Local Legal Entity" title="eg:  Inc / Asia Pacific Pte Ltd "/>
 <input type="text"  class="address"   placeholder="Address"/>
@@ -84,27 +84,21 @@
 <span class="fullname-container"><p style="font-weight:bold; margin:0; padding:0; font-size: 14px; text-transform: uppercase; margin-bottom:0;">FIRSTNAME LASTNAME</p>
 </span>
 
-<span class="position-container">
-<p style="font-weight:normal; font-size:14px;  margin:0; text-transform: uppercase"></p>
-</span>
-
-<span class="cert-container">
-<p style="font-weight:normal; font-size:10px; color:#aaa;  margin:0; "></p>
-</span>
+<p class="position-container" style="font-weight:normal; font-size:11px;  margin:0;margin-bottom:4px;  text-transform: uppercase"><span class="position"></span><span class="cert" style=color:#ccc;"">, <span  style="font-weight:normal; color:#aaa;  margin:0; "></span></span></p>
 
 
-<p  class="legal-container"  style="font-weight:normal; margin:0; font-size:11px;">Red Hat <span></span></p>
+<p  class="legal-container"  style="font-weight:normal; margin:0; font-size:11px; color:#888;">Red Hat <span></span></p>
 
 
-<span class="address-container" style="font-size:10px; margin: 0 ;">
+<span class="address-container" style="font-size:10px; margin: 0; color:#aaa;">
 <p style="font-size:11px; margin: 0 ;"></p>
 </span>
 <span class="address2-container" >
-<p style="font-size:11px; margin: 0 ;"></p>
+<p style="font-size:11px; margin: 0 ; color:#aaaa;"></p>
 </span>
 
 <p class="contact-container"
-    style="font-weight:normal; margin:0; font-size:10px; color:#777;  ">
+    style="font-weight:normal; margin:0; font-size:10px; color:#888; margin-bottom:6px; ">
 
     <span class="email-container" style="margin:0; padding:0;">
       <a class="email-anchor" style="color:#0088ce;font-size:10px;margin:0;text-decoration:none;font-family:'overpass', sans-serif;" href="mailto:"><span class="output_email_address"></span></a>
@@ -115,7 +109,6 @@
     <span class="mobile-container"   >M: <a href="" style="color:#0088ce;font-size:11px;margin:0;text-decoration:none;font-family:'overpass', sans-serif;"></a>  &nbsp; &nbsp;</span>
     <span class="fax-container"      >F: <a href="" style="color:#0088ce;font-size:11px;margin:0;text-decoration:none;font-family:'overpass', sans-serif;"></a></span>
 </p>
-
 <table border="0" cell-padding="0" cell-spacing="0">
 <tr>
 <td width="100px"><a href="https://redhat.com"> <img src="//www.redhat.com/profiles/rh/themes/redhatdotcom/img/logo-red-hat-black.png" width="90" height="auto"></a> </td>
@@ -169,8 +162,11 @@ src="https://www.redhat.com/cms/managed-files/summit_logo_170_0.png" /></a>
 <div class="plaintext sig-container">
 
   <span class="fullname-container"><p>FIRSTNAME LASTNAME</p></span>
-  <span class="position-container"><p></p></span>
-  <span class="cert-container"><p></p></span><br>
+  <span class="position-container">
+    <span class="position"></span>
+    <span class="cert">, <span></span></span>
+  </span>
+<br>
   <p    class="legal-container"> Red Hat <span></span></p>
   <span class="address-container"><p></p> </span>
   <span class="address2-container" ><p></p></span>
