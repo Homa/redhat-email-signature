@@ -116,6 +116,11 @@ label[for="hideform"] {
   position: relative;
   z-index: 9;
 }
+
+
+.team-promo{text-align:center; user-select:none; color:#ccc;}
+
+.team-promo a{color:currentcolor; text-decoration:none;}
 label[for="hideform"]:before {
   content: "Hide ";
 }

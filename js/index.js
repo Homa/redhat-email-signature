@@ -8,6 +8,11 @@ function updateHtmlSigRaw() {
 
 
   $("#html textarea").prepend('&lt;style&gt; @import url(overpass-30e2.kxcdn.com/overpass.css); &lt;/style&gt;').text;
+
+
+//  ugh  i just want tp cleanup the .hide mess for the textarea   $("*[style="display: none;"]").remove;
+
+
  }
 
 
@@ -91,6 +96,7 @@ else {$(".cert").hide();
 }
   updateHtmlSigRaw()
 });
+
 
 
 
