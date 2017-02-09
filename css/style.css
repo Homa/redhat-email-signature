@@ -94,7 +94,11 @@ form {
 
 .preview {
   height: 100vh;
+<<<<<<< HEAD
   background-color: #f4f4f4 ;
+=======
+  background: #f3f3f3 /*linear-gradient(to left, transparent 0%, #ccc 100%)*/;
+>>>>>>> 713a6bbe804d92378bc678327819fd1f6b287148
   background-repeat: repeat-y;
   background-size: .5em;
   background-position: top left;
@@ -199,7 +203,7 @@ label[for="hideform"] {
 
 }
 
-@media (min-width: 60em) {
+@media (min-width: 55em) {
   .options {
     position: relative;
 }
@@ -242,7 +246,7 @@ left: 0;
 
     }
 }
-@media (min-width: 75em) {
+@media (min-width: 70em) {
   form {
     width: 33.333%;
     min-height: 100vh;
@@ -281,7 +285,11 @@ left: 0;
   transition: all cubic-bezier(0.4, 0.1, 0.1, 1.3) 0.35s;
   left: 75%;
   top:3.2em;
+<<<<<<< HEAD
   height: .25em; box-shadow: 0 .15em #aaa
+=======
+  height: .25em; box-shadow: 0 .15em #ccc
+>>>>>>> 713a6bbe804d92378bc678327819fd1f6b287148
 }
 
 
@@ -314,7 +322,11 @@ left: 0;
   background-color: transparent !important;
   font-weight: 400;
   font-size: 1em;
+<<<<<<< HEAD
   padding: 0.5em 0em;
+=======
+  padding: 0.5em 0;
+>>>>>>> 713a6bbe804d92378bc678327819fd1f6b287148
   box-shadow: 0 1px #eee;
   border: 0;
   border-radius: 0;
@@ -378,8 +390,13 @@ input:-webkit-autofill, select:-webkit-autofill, textarea:-webkit-autofill {
   min-height: 50vh;
 
   padding: 2em;
+<<<<<<< HEAD
   box-shadow: 0 0.1em 2.75em rgba(0, 0, 0, 0.15);
   margin: 2em auto !important;
+=======
+  box-shadow: 0 0.1em 3.75em rgba(0, 0, 0, 0.15);
+  margin: 2em auto;
+>>>>>>> 713a6bbe804d92378bc678327819fd1f6b287148
   background-color: white;
 }
 
@@ -408,12 +425,16 @@ input:-webkit-autofill, select:-webkit-autofill, textarea:-webkit-autofill {
   height: 3em;
   line-height: 3em;
   text-align: center;
+<<<<<<< HEAD
   background-color: #e5e5e5;
+=======
+  background-color: rgba(0,0,0,0.1);
+>>>>>>> 713a6bbe804d92378bc678327819fd1f6b287148
   margin: 0;
   padding: 0;
   appearance: none;
   outline: 0;
-  color: #777;
+  color: #555;
 }
 
  #normal-view, #normal-view + label,
@@ -467,7 +488,11 @@ h1{line-height:1em; font-weight: 500;}
 .preview input:checked ~ .sig-container{}
 
 @keyframes loadsig{
+<<<<<<< HEAD
   0%{transform:scale(.9802195); opacity:0}
+=======
+  0%{transform:scale(.972195); opacity:0}
+>>>>>>> 713a6bbe804d92378bc678327819fd1f6b287148
 }
 
 
@@ -486,6 +511,9 @@ border-radius:0;
   overflow-y: scroll !important ;
   font-size: 9px;
 }
+
+
+a,label,input{-webkit-tap-highlight-color: rgba(0,0,0,0);}
 
 .preview {
   position: relative;
@@ -509,7 +537,11 @@ border-radius:0;
 }
 
 .preview label {
+<<<<<<< HEAD
 z-index:1;
+=======
+ z-index:1;
+>>>>>>> 713a6bbe804d92378bc678327819fd1f6b287148
 }
 
 .preview input:checked + label:before {
@@ -527,10 +559,10 @@ z-index:1;
     transform: scale(0.1);
   }
   60% {
-    background-color: white;
+    background-color: rgba(0,0,0,0.1);
   }
   100% {
-    transform: scale(2.3);
+    transform: scale(2.53);
   }
 }
 
@@ -538,11 +570,22 @@ z-index:1;
 
 
 
+.sig-container > .btn{font-family: overpass, sans-serif !important; font-size: 2em !important;margin:1em 0 !important; display:block;appearance:none; width: 100%; height:3em; line-height: 3em; border:none; cursor:pointer;
+    border-color: #c00; border-width: 2px !important; border-style:solid;
+    background: linear-gradient(-45deg,transparent 50%,#c00 50.01%,#c00 100%);
+    background-size: 250%;
+    text-align:center;
+    background-position: 100% 100%;
+    transition: background-position .2s linear, color .2s ease-out
+    ,background-color .1s ease-out .2s
+}
 
-
-
-
-
+.sig-container > .btn:active,
+.sig-container > .btn:focus,
+.sig-container > .btn:hover {
+    background-position: 0% 0%;
+    color: #fff;
+}
 
 
 
